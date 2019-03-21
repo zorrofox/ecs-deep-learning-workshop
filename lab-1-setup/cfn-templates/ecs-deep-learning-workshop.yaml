@@ -361,7 +361,7 @@ Resources:
                 cd amazon-ecr-credential-helper && make docker && cp bin/local/docker-credential-ecr-login
                 /usr/local/bin/
 
-                docker pull "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository}"
+                su - ec2-user -c "docker pull ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository}"
 
                 INSTANCE_ID=$(curl 169.254.169.254/latest/meta-data/instance-id 2>/dev/null)
 
@@ -428,7 +428,7 @@ Resources:
                 cd amazon-ecr-credential-helper && make docker && cp bin/local/docker-credential-ecr-login
                 /usr/local/bin/
 
-                docker pull "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository}"
+                su - ec2-user -c "docker pull ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository}"
 
                 INSTANCE_ID=$(curl 169.254.169.254/latest/meta-data/instance-id 2>/dev/null)
 
@@ -495,7 +495,7 @@ Resources:
                 cd amazon-ecr-credential-helper && make docker && cp bin/local/docker-credential-ecr-login
                 /usr/local/bin/
 
-                docker pull "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository}"
+                su - ec2-user -c "docker pull ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository}"
 
                 INSTANCE_ID=$(curl 169.254.169.254/latest/meta-data/instance-id 2>/dev/null)
 
@@ -562,7 +562,7 @@ Resources:
                 cd amazon-ecr-credential-helper && make docker && cp bin/local/docker-credential-ecr-login
                 /usr/local/bin/
 
-                docker pull "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository}"
+                su - ec2-user -c "docker pull ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository}"
 
                 INSTANCE_ID=$(curl 169.254.169.254/latest/meta-data/instance-id 2>/dev/null)
 
@@ -629,7 +629,7 @@ Resources:
                 cd amazon-ecr-credential-helper && make docker && cp bin/local/docker-credential-ecr-login
                 /usr/local/bin/
 
-                docker pull "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository}"
+                su - ec2-user -c "docker pull ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository}"
 
                 INSTANCE_ID=$(curl 169.254.169.254/latest/meta-data/instance-id 2>/dev/null)
 
@@ -696,7 +696,7 @@ Resources:
                 cd amazon-ecr-credential-helper && make docker && cp bin/local/docker-credential-ecr-login
                 /usr/local/bin/
 
-                docker pull "${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository}"
+                su - ec2-user -c "docker pull ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository}"
 
                 INSTANCE_ID=$(curl 169.254.169.254/latest/meta-data/instance-id 2>/dev/null)
 
