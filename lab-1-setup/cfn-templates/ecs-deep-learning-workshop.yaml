@@ -703,7 +703,7 @@ Resources:
           Effect: Allow
           Principal:
             Service:
-            - application-autoscaling.amazonaws.com.cn
+            - application-autoscaling.amazonaws.com
         Version: 2012-10-17
       ManagedPolicyArns:
       - arn:aws-cn:iam::aws:policy/service-role/AmazonEC2SpotFleetAutoscaleRole
@@ -785,7 +785,7 @@ Resources:
           Effect: Allow
           Principal:
             Service:
-            - spotfleet.amazonaws.com.cn
+            - spotfleet.amazonaws.com
         Version: 2012-10-17
       ManagedPolicyArns:
       - arn:aws-cn:iam::aws:policy/service-role/AmazonEC2SpotFleetRole
