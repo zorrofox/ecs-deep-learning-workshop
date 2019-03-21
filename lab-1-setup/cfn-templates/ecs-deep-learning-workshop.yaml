@@ -42,6 +42,10 @@ Mappings:
       AMI: ami-0de5608ca20c07aa2
     us-west-2:
       AMI: ami-093381d21a4fc38d1
+    cn-north-1:
+      AMI: ami-0f097157d4aa194d5
+    cn-northwest-1:
+      AMI: ami-074acd5b3a200c67f
 Outputs:
   awsRegionName:
     Description: The name of the AWS Region your template was launched in
@@ -132,7 +136,7 @@ Resources:
           - - Ref: AWS::AccountId
             - .dkr.ecr.
             - Ref: AWS::Region
-            - .amazonaws.com/
+            - .amazonaws.com.cn/
             - Ref: ecrRepository
             - :latest
         LogConfiguration:
@@ -699,10 +703,10 @@ Resources:
           Effect: Allow
           Principal:
             Service:
-            - application-autoscaling.amazonaws.com
+            - application-autoscaling.amazonaws.com.cn
         Version: 2012-10-17
       ManagedPolicyArns:
-      - arn:aws:iam::aws:policy/service-role/AmazonEC2SpotFleetAutoscaleRole
+      - arn:aws-cn:iam::aws:policy/service-role/AmazonEC2SpotFleetAutoscaleRole
       Path: /
     Type: AWS::IAM::Role
   spotFleetInstanceProfile:
@@ -722,10 +726,10 @@ Resources:
           Effect: Allow
           Principal:
             Service:
-            - ec2.amazonaws.com
+            - ec2.amazonaws.com.cn
         Version: 2012-10-17
       ManagedPolicyArns:
-      - arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role
+      - arn:aws-cn:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role
       Path: /
       Policies:
       - PolicyDocument:
@@ -735,7 +739,7 @@ Resources:
             Resource:
               Fn::Join:
               - ''
-              - - 'arn:aws:s3:::'
+              - - 'arn:aws-cn:s3:::'
                 - Ref: outputBucket
           - Action:
             - s3:PutObject
@@ -745,7 +749,7 @@ Resources:
             Resource:
               Fn::Join:
               - ''
-              - - 'arn:aws:s3:::'
+              - - 'arn:aws-cn:s3:::'
                 - Ref: outputBucket
                 - /*
           - Action:
@@ -759,7 +763,7 @@ Resources:
             Resource:
               Fn::Join:
               - ''
-              - - 'arn:aws:ecr:'
+              - - 'arn:aws-cn:ecr:'
                 - Ref: AWS::Region
                 - ':'
                 - Ref: AWS::AccountId
@@ -781,10 +785,10 @@ Resources:
           Effect: Allow
           Principal:
             Service:
-            - spotfleet.amazonaws.com
+            - spotfleet.amazonaws.com.cn
         Version: 2012-10-17
       ManagedPolicyArns:
-      - arn:aws:iam::aws:policy/service-role/AmazonEC2SpotFleetRole
+      - arn:aws-cn:iam::aws:policy/service-role/AmazonEC2SpotFleetRole
       Path: /
     Type: AWS::IAM::Role
   spotFleetWaitCondition:
