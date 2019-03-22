@@ -641,7 +641,7 @@ Resources:
             - ECSAmi
             - Ref: AWS::Region
             - AMI
-          InstanceType: r3.xlarge
+          InstanceType: r4.xlarge
           KeyName:
             Ref: KeyName
           Monitoring:
