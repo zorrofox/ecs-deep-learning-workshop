@@ -1,5 +1,9 @@
-# Deploy a Deep Learning Framework on Amazon ECS: Lab Guide
+# Deploy a Deep Learning Framework on Amazon ECS: Lab Guide - For China Regions
   
+## China Regions
+1. Add BJS and ZHY regions image.
+2. Bug *docker-credential-ecr-login* work around.
+3. Add *pip* index url for China.
   
 ## Overview:
 [Deep Learning (DL)](https://en.wikipedia.org/wiki/Deep_learning) is an implementation of [Machine Learning (ML)](https://en.wikipedia.org/wiki/Machine_learning) that uses neural networks to solve difficult problems such as image recognition, sentiment analysis and recommendations.  Neural networks simulate the functions of the brain where artificial neurons work in concert to detect patterns in data.  This allows deep learning algorithms to classify, predict and recommend with an increasing degree of accuracy as more data is trained in the network.  DL algorithms generally operate with a high degree of parallelism and are computationally intense.  As a result, emerging deep learning libraries, frameworks, and platforms allow for data and model parallelization and can leverage advancements in GPU technology for improved performance.  

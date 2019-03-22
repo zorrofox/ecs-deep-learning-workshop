@@ -363,7 +363,7 @@ Resources:
 
                 INSTANCE_ID=$(curl 169.254.169.254/latest/meta-data/instance-id 2>/dev/null)
 
-                su - ec2-user -c "docker pull ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository}" || 
+                su - ec2-user -c "docker pull ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository} 2>/dev/null" || 
                 /opt/aws/bin/cfn-signal -s true -i $INSTANCE_ID "${spotFleetWaitConditionHandle}"
 
                 '
@@ -429,7 +429,7 @@ Resources:
 
                 INSTANCE_ID=$(curl 169.254.169.254/latest/meta-data/instance-id 2>/dev/null)
 
-                su - ec2-user -c "docker pull ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository}" || 
+                su - ec2-user -c "docker pull ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository} 2>/dev/null" || 
                 /opt/aws/bin/cfn-signal -s true -i $INSTANCE_ID "${spotFleetWaitConditionHandle}"
 
                 '
@@ -495,7 +495,7 @@ Resources:
 
                 INSTANCE_ID=$(curl 169.254.169.254/latest/meta-data/instance-id 2>/dev/null)
 
-                su - ec2-user -c "docker pull ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository}" || 
+                su - ec2-user -c "docker pull ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository} 2>/dev/null" || 
                 /opt/aws/bin/cfn-signal -s true -i $INSTANCE_ID "${spotFleetWaitConditionHandle}"
 
                 '
@@ -561,7 +561,7 @@ Resources:
 
                 INSTANCE_ID=$(curl 169.254.169.254/latest/meta-data/instance-id 2>/dev/null)
 
-                su - ec2-user -c "docker pull ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository}" || 
+                su - ec2-user -c "docker pull ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository} 2>/dev/null" || 
                 /opt/aws/bin/cfn-signal -s true -i $INSTANCE_ID "${spotFleetWaitConditionHandle}"
 
                 '
@@ -627,7 +627,7 @@ Resources:
 
                 INSTANCE_ID=$(curl 169.254.169.254/latest/meta-data/instance-id 2>/dev/null)
 
-                su - ec2-user -c "docker pull ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository}" || 
+                su - ec2-user -c "docker pull ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository} 2>/dev/null" || 
                 /opt/aws/bin/cfn-signal -s true -i $INSTANCE_ID "${spotFleetWaitConditionHandle}"
 
                 '
@@ -693,7 +693,7 @@ Resources:
 
                 INSTANCE_ID=$(curl 169.254.169.254/latest/meta-data/instance-id 2>/dev/null)
 
-                su - ec2-user -c "docker pull ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository}" || 
+                su - ec2-user -c "docker pull ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com.cn/${ecrRepository} 2>/dev/null" || 
                 /opt/aws/bin/cfn-signal -s true -i $INSTANCE_ID "${spotFleetWaitConditionHandle}"
 
                 '

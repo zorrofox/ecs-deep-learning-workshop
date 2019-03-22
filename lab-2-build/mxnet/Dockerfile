@@ -1,6 +1,7 @@
 FROM mxnet/python
 
 ENV DEBIAN_FRONTEND noninteractive
+ENV PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
 
 RUN apt-get -y update
 RUN apt-get -y install git \
