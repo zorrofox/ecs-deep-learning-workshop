@@ -3,6 +3,7 @@ FROM mxnet/python:latest_cpu_mkl_py3
 ENV DEBIAN_FRONTEND noninteractive
 ENV PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
 
+RUN apt-get -y install apt-transport-https
 COPY sources.list /etc/apt/sources.list
 
 RUN apt-get -y update

@@ -3,6 +3,7 @@ FROM mxnet/python:1.4.0_gpu_cu100_py3
 ENV DEBIAN_FRONTEND noninteractive
 ENV PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
 
+RUN apt-get -y install apt-transport-https
 COPY sources.list /etc/apt/sources.list
 
 RUN apt-get -y update
