@@ -3,6 +3,11 @@ FROM mxnet/python:1.4.0_gpu_cu100_py3
 ENV DEBIAN_FRONTEND noninteractive
 ENV PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
 
+RUN deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse \
+  && deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse \
+  && deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse \
+  &&deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse
+
 RUN apt-get -y update
 RUN apt-get -y install git \
   python-opencv \
