@@ -23,6 +23,7 @@ RUN cd ${WORKSHOPDIR} \
 
 COPY predict_imagenet.py /usr/local/bin/
 
+RUN pip install jupyter-console==5.2.0
 RUN pip install jupyter
 
 RUN jupyter-notebook --generate-config --allow-root \
