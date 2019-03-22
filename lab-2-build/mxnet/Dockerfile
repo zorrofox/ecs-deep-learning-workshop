@@ -1,4 +1,4 @@
-FROM mxnet/python
+FROM mxnet/python:python3_cpu
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
@@ -12,7 +12,7 @@ RUN apt-get -y install git \
 
 RUN pip install dumb-init
 RUN pip install awscli
-RUN pip install matplotlib==2.2.4
+RUN pip install matplotlib
 
 ENV WORKSHOPDIR /root/ecs-deep-learning-workshop
 RUN mkdir ${WORKSHOPDIR}
@@ -23,8 +23,6 @@ RUN cd ${WORKSHOPDIR} \
 
 COPY predict_imagenet.py /usr/local/bin/
 
-RUN pip install IPython==5.0
-RUN pip install jupyter-console==5.2.0
 RUN pip install jupyter
 
 RUN jupyter-notebook --generate-config --allow-root \
