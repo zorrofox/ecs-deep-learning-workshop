@@ -39,6 +39,7 @@ RUN python3 -c "from notebook.auth import passwd;print(passwd('${PASSWORD}') if 
 RUN sed -i "s/#c.NotebookApp.password = u''/c.NotebookApp.password = u'$(cat ${WORKSHOPDIR}/password_temp)'/g" /root/.jupyter/jupyter_notebook_config.py
 
 RUN rm ${WORKSHOPDIR}/password_temp
+RUN echo /usr/local/cuda-10.0/compat >> /etc/ld.so.conf.d/cuda-10-0.conf
 
 WORKDIR ${WORKSHOPDIR}
 EXPOSE 8888
